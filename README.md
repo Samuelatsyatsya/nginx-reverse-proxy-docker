@@ -65,13 +65,13 @@ Make sure the following are installed:
 
 ## Running the Application with Docker
 
-### Step 1: Clone the Repository
+#### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/Samuelatsyatsya/nginx-reverse-proxy-docker.git
 cd nginx-reverse-proxy-docker
 ```
 
-### Step 2: Set Environment Variables
+#### Step 2: Set Environment Variables
 
 Create a .env file in the project root:
 
@@ -88,20 +88,20 @@ FRONTEND_PORT=
 NODE_ENV=
 VITE_API_URL=
 
-### Step 3: Build and Start the Containers
+#### Step 3: Build and Start the Containers
 ```bash
 docker compose up --build
 ```
 This command builds the Docker images and starts all services: MySQL, backend, frontend, and Nginx.
 
-### Step 4: Access the Application
+#### Step 4: Access the Application
 
 - Frontend: http://localhost
 
 - Backend API: http://localhost/api
 
 ## Docker Setup Details
-### Backend Service
+#### Backend Service
 
 - Runs a Node.js Express server
 
@@ -109,7 +109,7 @@ This command builds the Docker images and starts all services: MySQL, backend, f
 
 - Handles API requests at /api
 
-### Frontend Service
+#### Frontend Service
 
 - Builds the React Vite application
 
@@ -117,7 +117,7 @@ This command builds the Docker images and starts all services: MySQL, backend, f
 
 - Exposed on port 80
 
-### Nginx Reverse Proxy
+#### Nginx Reverse Proxy
 
 - Listens on port 9000
 
@@ -125,7 +125,7 @@ This command builds the Docker images and starts all services: MySQL, backend, f
 
 - Proxies /api requests to the backend
 
-### MySQL Database
+#### MySQL Database
 
 - Runs in a separate container
 
